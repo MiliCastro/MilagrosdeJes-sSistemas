@@ -1,0 +1,10 @@
+fun main() {
+    print("Ingrese un número: ")
+    val Decimal = readLine()?.toInt() ?: 0
+    val Binario = Integer.toBinaryString(Decimal)
+    val Octal = Integer.toOctalString(Decimal)
+    val Hexadecimal = Integer.toHexString(Decimal)
+    println("El número $Decimal en binario es $Binario")
+    println("El número $Decimal en octal es $Octal")
+    println("El número $Decimal en hexadecimal es $Hexadecimal")
+}
