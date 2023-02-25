@@ -1,0 +1,15 @@
+
+fun main() {
+    val numeros = IntArray(10) // Creamos un arreglo de 10 enteros
+    println("Ingrese 10 números enteros:") 
+    for (i in numeros.indices) { // Llenamos el arreglo con números ingresados por el usuario
+        numeros[i] = readLine()?.toInt() ?: 0 // Leemos un número ingresado por el usuario y lo almacenamos en el arreglo
+    }
+    println("Arreglo original: ${numeros.contentToString()}") // Imprimimos el arreglo original
+    for (i in numeros.indices) { // Elevamos cada elemento al cuadrado
+        numeros[i] = numeros[i] * numeros[i]
+    }
+    println("Arreglo elevado al cuadrado: ${numeros.contentToString()}") // Imprimimos el arreglo con los elementos elevados al cuadrado
+}
+
+
