@@ -1,0 +1,13 @@
+fun main() {
+    print("Ingrese un número entre 1 y 9999: ")
+    val numero = readLine()?.toInt() ?: 0
+    if (numero in 1..9999) {
+        val Millar = numero / 1000
+        val centenas = (numero % 1000) / 100
+        val decenas = (numero % 100) / 10
+        val unidades = numero % 10
+        println("$Millar unidades de millar, $centenas centenas, $decenas decenas y $unidades unidades")
+    } else {
+        println("El número ingresado no está dentro del rango permitido.")
+    }
+}
