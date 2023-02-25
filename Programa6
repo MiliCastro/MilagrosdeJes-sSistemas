@@ -1,0 +1,18 @@
+fun main() {
+    print("Ingrese un número: ")
+    val numero = readLine()?.toIntOrNull()
+    if (numero != null && numero > 0) {
+        val factorial = calcularFactorial(numero)
+        print("Factorial de $numero es $factorial")
+    } else {
+        print("El número no es válido.")
+    }
+}
+
+fun calcularFactorial(numero: Int): Int {
+    var factorial = 1
+    for (i in 2..numero) {
+        factorial *= i
+    }
+    return factorial
+}
