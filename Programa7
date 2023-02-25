@@ -1,0 +1,11 @@
+fun main() {
+    val palabras = Array(5) { "" }
+    for (i in 0 until palabras.size) {
+        print("Ingrese la ${i + 1} palabra: ")
+        palabras[i] = readLine() ?: ""
+    }
+    palabras.sortBy { it.length }
+    for (palabra in palabras) {
+        println(palabra)
+    }
+}
