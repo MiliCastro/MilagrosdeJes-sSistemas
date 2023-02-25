@@ -1,0 +1,26 @@
+fun main() {
+    print("Ingrese una palabra: ")
+    val palabra = readLine() ?: ""
+    val vocales = contarVocales(palabra)
+    print("La palabra '$palabra' tiene un total de $vocales vocales.")
+}
+
+fun contarVocales(palabra: String): Int {
+    val vocales = mutableMapOf<Char, Int>()
+    var totalVocales = 0
+    for (letra in palabra) {
+        if (esVocal(letra)) {
+            totalVocales++
+            vocales[letra] = vocales.getOrDefault(letra, 0) + 1
+        }
+    }
+    println("Detalle de vocales:")
+    for ((vocal, cantidad) in vocales) {
+        println("$vocal: $cantidad")
+    }
+    return totalVocales
+}
+
+fun esVocal(letra: Char): Boolean {
+    return letra in "AEIOUaeiou"
+}
