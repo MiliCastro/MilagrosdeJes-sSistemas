@@ -1,0 +1,10 @@
+fun main() {
+    print("Ingrese una palabra: ")
+    val palabra = readLine()?.lowercase() ?: ""
+    val esPalindromo = esPalindromo(palabra)
+    if (esPalindromo) {
+        println("La palabra $palabra es un palíndromo.")
+    } else {
+        println("La palabra $palabra no es un palíndromo.")
+    }
+}
